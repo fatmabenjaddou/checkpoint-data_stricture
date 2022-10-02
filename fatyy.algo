@@ -1,0 +1,44 @@
+Algorithm Data
+
+VAR
+setOne,setTwo: ARRAY_OF INTEGER[4]
+i,j,sum : integer:=0
+test:boolean;
+
+BEGIN
+
+setOne:=[12, 13, 6, 10]
+setTwo:= [13, 10, 16, 15]
+
+FOR i FROM 0 TO set1.length-1 STEP 1  DO
+    test:=false
+FOR j FROM 0 TO set2.length-1 STEP 1  DO
+if setOne[i]=setTwo[j]
+     test:=true
+
+END_IF
+END_FOR
+ 
+ if test=true THEN 
+    sum := sum + setOne[i];
+        END_IF
+        END_FOR
+
+ FOR i FROM 0 TO set2.length-1 STEP 1  DO
+    test:=false
+FOR j FROM 0 TO set1.length-1 STEP 1  DO
+if setTwo[i]=setOne[j]
+     test:=true
+
+END_IF
+END_FOR
+ 
+ if test=true THEN 
+    sum := sum + setOne[i];
+        END_IF
+        END_FOR
+     
+Write("sum of all distinct elements : ", sum);
+
+END
+

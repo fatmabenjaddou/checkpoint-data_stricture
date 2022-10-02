@@ -1,0 +1,45 @@
+Algorithm Htab
+
+VAR
+setOne,setTwo : ARRAY_OF INTEGER[10];
+ htab : HASH_TABLE<INTEGER,STRING>;
+ setOfhtabKeys : ARRAY_OF INTEGER[20];
+i,count,sum: INTEGER:=0
+
+BEGIN
+setOne := [4, 2, 9, 1];  
+setTwo := [12, 4, 2, 1, 3];
+
+FOR i FROM 0 TO setOne.length -1 STEP 1  DO
+       IF (htab.lookup(setOne[i]) = TRUE) THEN
+           count := htab.get(setOne[i]);
+           htab.insert(setOne[i],count+1);
+       ELSE
+       htab.insert(setOne[i],1);
+
+ END_IF
+   END_FOR
+
+   FOR i FROM 0 TO setTwo.length-1 DO
+		IF (htab.lookup(setTwo[i]) = TRUE) THEN
+			counter := htab.get(setTwo[i]);
+			htab.insert(setTwo[i],counter+1);
+		ELSE
+			htab.insert(setTwo[i],1);
+		END_IF
+	END_FOR
+
+    FOR i FROM 0 TO setOfhtabKeys.length-1 DO
+		IF(htab.get(setOfhtabKeys[i] = 1)
+			sum := sum + setOfhtabKeys[i];
+		END_IF
+	END_FOR
+	
+	WRITE(sum);
+	
+END
+
+
+
+
+
